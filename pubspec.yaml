@@ -36,6 +36,7 @@ dependencies:
 
   #cached image
   cached_network_image: ^3.3.1
+  ionicons: ^0.2.2
 
 
 
