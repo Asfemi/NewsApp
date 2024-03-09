@@ -1,6 +1,8 @@
 import 'package:cleanarchitecture/features/daily_news/domain/entitites/arcticle.dart';
 import 'package:floor/floor.dart';
 
+import '../../../../core/constants/constants.dart';
+
 @Entity(tableName: 'article',primaryKeys: ['id'])
 class ArticleModel extends ArticleEntity {
   const ArticleModel({
@@ -29,7 +31,7 @@ class ArticleModel extends ArticleEntity {
       title: map['title'] ?? "",
       description: map['description'] ?? "",
       url: map['url'] ?? "",
-      //urlToImage: map['urlToImage'] != null && map['urlToImage'] != "" ? map['urlToImage'] : kDefaultImage,
+      urlToImage: map['urlToImage'] != null && map['urlToImage'] != "" ? map['urlToImage'] : kDefaultImage,
       publishedAt: map['publishedAt'] ?? "",
       content: map['content'] ?? "",
     );
