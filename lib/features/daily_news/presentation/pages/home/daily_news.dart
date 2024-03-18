@@ -43,9 +43,7 @@ class DailyNews extends StatelessWidget {
         if (state is RemoteArticlesLoading) {
           return const Center(child: CupertinoActivityIndicator());
         }
-        if (state is RemoteArticlesError) {
-          return const Center(child: Icon(Icons.refresh));
-        }
+        
         if (state is RemoteArticlesDone) {
           return ListView.builder(
            itemBuilder: (context,index){
@@ -57,6 +55,10 @@ class DailyNews extends StatelessWidget {
            itemCount: state.articles!.length,
          );
         }
+        if (state is RemoteArticlesError) {
+          return const Center(child: Icon(Icons.refresh));
+        }
+       
         return const SizedBox();
       },
     );
